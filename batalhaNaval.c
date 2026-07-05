@@ -5,6 +5,50 @@
 // Siga os comentários para implementar cada parte do desafio.
 
 int main() {
+    // variaveis para criacao da matriz
+    int matriz [10][10];
+                //// l para linha e c para coluna
+    int l, c;
+    //variavel para tamanho dos navios
+    int navio = 3;
+//variaveis para navio na horizontal
+int l1 = 2, c1 = 3;
+//variaveis para navio na vertical
+int l2 = 4, c2 = 2;
+//variaveis para navio na diagonal
+int l3 = 7, c3 = 4;
+
+//navio na horizontal
+for  (l = 0; l < navio; l ++){
+    matriz [l1][c1 + l] = 3;
+}
+
+//navio na vertical
+for (int c = 0; c < navio; c ++){
+    matriz [l2 + c][c2] = 3;
+}
+
+//navio na diagonal
+for (l = 0; l < navio; l ++){
+    for (c = 0; c < navio; c ++){
+        matriz [l3 ++][c3 ++] = 3;
+    }
+}
+    // declarando a matriz
+    for ( l = 0; l < 10; l++) {
+        for (c = 0; c < 10; c ++) {
+            matriz [l][c] = 0;
+        }
+    }
+    // mostrando na tela a matriz
+    for ( l = 0; l < 10; l ++){
+        for ( c = 0; c < 10; c ++){
+            printf ("%d", matriz [l][c]);
+        }
+    
+        printf ("\n");
+    }
+      
     // Nível Novato - Posicionamento dos Navios
     // Sugestão: Declare uma matriz bidimensional para representar o tabuleiro (Ex: int tabuleiro[5][5];).
     // Sugestão: Posicione dois navios no tabuleiro, um verticalmente e outro horizontalmente.
